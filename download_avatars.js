@@ -20,9 +20,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
     cb(err, JSON.parse(body));
   });
 
-
 }
-
 
 getRepoContributors("jquery", "jquery", function(err, result) {
   console.log("Errors:", err);
@@ -30,8 +28,13 @@ getRepoContributors("jquery", "jquery", function(err, result) {
   for (var i = 0; i < result.length; i++)
 
   {
-    console.log(result[i].avatar_url);
+     var youareL =  result[i].avatar_url;
+     var path = "./downloadedAvatars/" + result[i].login + result[i].id;
+
+      downloadImageByURL(youareL, path);
   }
+
+
 
 });
 
