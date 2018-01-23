@@ -1,6 +1,9 @@
 # Authentication token
 secrets.js
 
+#contents of avatar folder
+./downloadedAvatars/*
+
 # Logs
 logs
 *.log
